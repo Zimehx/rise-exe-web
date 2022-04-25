@@ -1,0 +1,109 @@
+html{
+    background: radial-gradient(circle, rgba(3,33,51,1) 0%, rgba(0,7,22,1) 100%);
+    color:white;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body{
+    display:flex;
+    align-items: center;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+    opacity:0;
+    transition: 4s; 
+    user-select:none;
+}
+
+#container{
+    transition: 2s; 
+    margin-top:50px;
+}
+
+#top{
+    font-weight: 900;
+    font-size:40px;
+    margin-top:56px;
+}
+
+#description{
+    font-size:25px;
+    font-weight: 700;
+}
+
+#buy-info{
+    margin-top:70px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#product-list{
+    display:flex;
+}
+
+#features-list{
+    opacity:0;
+    margin-top:100px;
+    position:absolute;
+    font-weight: 600;
+    font-size:30px;
+    text-align: left;
+    z-index: -999;
+}
+
+.features{
+    margin-top:60px;
+    font-size:20px;
+    font-weight: 900;
+    color:rgb(105, 174, 230)
+}
+
+.features:hover{
+    cursor:pointer;
+    color:rgb(42, 108, 161)
+}
+
+.product{
+    display:flex;
+    flex-direction: column;
+    margin:20px;
+    font-size:20px;
+    font-weight: 600;
+}
+
+.product span{
+    font-weight: 800;
+    font-size:18px;
+    color:rgb(61, 137, 199)
+}
+
+#products{
+    margin-top:100px;
+}
+
+#purchase-text{
+    font-weight: 700;
+    font-size:30px;
+}
+
+#discord{
+    margin:30px;
+    display: flex;
+    align-items:center;
+    font-size:26px;
+    font-weight: 500;
+    padding:10px 20px;
+    border-radius:50px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#discord span{
+    user-select: all;
+}
+
+#discord img{
+    margin-right:10px;
+}

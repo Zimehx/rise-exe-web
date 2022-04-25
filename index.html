@@ -1,0 +1,95 @@
+<head>
+    <title>RISE.EXE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="features-list"> 
+        <center>RISE.EXE Features list</center><br>
+    </div>
+    <div id="container">
+        <div id="top">
+            <div id="title">RISE.EXE</div>
+            <div id="description">Dual-Multibox extension for Vanis.io</div>
+        </div>
+        
+        <div id="products">
+            <div id="product-list">
+                <div class="product">
+                    3 WEEKS ACCESS
+                    <span>5 EUR</span>
+                </div>
+                <div class="product">
+                    LIFETIME ACCESS
+                    <span>15 EUR</span>
+                </div>
+                <div class="product">
+                    x2 LIFETIME ACCESS
+                    <span>20 EUR</span>
+                </div>
+            </div><br>
+            <img src="https://i.postimg.cc/xjkHwTFY/image.png">
+        </div>
+
+        <div id="buy-info">
+            <div id="purchase-text">If you want to purchase the extension<br>contact us on Discord</div>
+            <div id="discord">
+                <img src="https://i.postimg.cc/7ZXyMD4J/Discord-Logo-White.png" width="40">
+                <span>issa#2499</span>
+            </div>
+        </div>
+
+        <span class="features" onclick="toggleFeaturesList()">Features list</span>
+    </div>
+</body>
+
+<script>
+    let isFeaturesOpen = false
+    const container = document.querySelector('#container')
+    const featuresList = document.querySelector('#features-list')
+    
+    const features = [
+        'Dual Multibox + many custom options',
+        'Better auto-respawn',
+        'Network and client statistics',
+        'Player tracker + skin stealer',
+        'New client style',
+        'Auto chat messages keybinds',
+        'Player list',
+        'Cells cursor lines',
+        'Any URL custom skins',
+        'Anti AFK and Auto-reconnect',
+        '0 ads and new death stats',
+        'Custom cells transparency'
+    ]
+
+    window.onload = () => { 
+        document.body.style.opacity = '1'
+        container.style.marginTop = '0'
+
+        features.forEach(feature => {
+            featuresList.innerHTML += '• ' + feature + '<br>'
+        })
+
+        featuresList.innerHTML += `
+            <br><center><span class="features" onclick="toggleFeaturesList()">Home page</span></center>
+        `
+    }
+
+     function toggleFeaturesList() { 
+        container.style.transition = '0.5s'
+        featuresList.style.transition = '0.5s'
+
+         if(window.isFeaturesOpen) {
+            container.style.opacity = '1'
+            featuresList.style.opacity = '0'
+            featuresList.style.zIndex = '-9'
+         } else {
+            container.style.opacity = '0'
+            featuresList.style.opacity = '1'
+            featuresList.style.zIndex = '11'
+         }
+
+        window.isFeaturesOpen = !window.isFeaturesOpen
+     }
+</script>
